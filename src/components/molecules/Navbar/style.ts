@@ -13,15 +13,16 @@ export const NavbarContainer = styled.nav<{ type: TypeType }>`
 `
 
 export const LinksList = styled.ul<{ type: TypeType }>`
+  width: ${({ type }) => type === "aside" && "100%"};
   display: flex;
-  flex-direction: ${({ type }) => type === "footer" && "column"};
+  flex-direction: ${({ type }) => (type === "footer" || type === "aside") && "column"};
   justify-content: center;
-  align-items: ${({ type }) => type === "footer" ? "flex-start" : "center"};
-  gap: ${({ type }) => type === "footer" ? "0.5rem" : "2rem"};
+  align-items: ${({ type }) => (type === "footer" || type === "aside") ? "flex-start" : "center"};
+  gap: ${({ type }) => type === "footer" ? "0.5rem" : type === "aside" ? "1rem" : "2rem"};
   list-style-type: none;
 
   .home-link {
-    display: ${({ type }) => type === "footer" ? "unset" : "none"};
+    display: ${({ type }) => (type === "footer" || type === "aside") ? "unset" : "none"};
   }
 `
 

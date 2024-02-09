@@ -1,6 +1,6 @@
 import { NavbarContainer, LinksList, ListItem, Link } from "./style";
 
-export type TypeType = "footer" | "header"
+export type TypeType = "footer" | "header" | "aside"
 
 type NavbarProps = {
   type: TypeType
