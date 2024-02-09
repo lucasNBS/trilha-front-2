@@ -1,4 +1,4 @@
-import logo from "public/images/logo.svg"
+import logo from "/images/logo.svg"
 import { Image, LogoContainer, LogoText } from "./style"
 import { Link } from "react-router-dom"
 

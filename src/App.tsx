@@ -13,9 +13,9 @@ function App({ children }: AppProps) {
   return (
     <BrowserRouter>
       <ThemeContext>
-        <GlobalStyle />
-        <Router />
         <DefaultTemplate>
+          <GlobalStyle />
+          <Router />
           {children}
         </DefaultTemplate>
       </ThemeContext>
