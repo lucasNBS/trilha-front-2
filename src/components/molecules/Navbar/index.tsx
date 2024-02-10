@@ -14,6 +14,9 @@ export default function Navbar({ type }: NavbarProps) {
           <Link to="/">Home</Link>
         </ListItem>
         <ListItem>
+          <Link to="/inscricao">Inscrição</Link>
+        </ListItem>
+        <ListItem>
           <Link to="/#">Contato</Link>
         </ListItem>
         <ListItem>

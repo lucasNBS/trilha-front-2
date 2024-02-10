@@ -75,16 +75,25 @@ export default function Form() {
     register,
     handleSubmit,
     reset,
+    getValues,
     formState: { errors }
   } = useForm({
     resolver: yupResolver(formSchema)
   })
-  const { isSubscribed, setIsSubscribed, setIsVisible } = useContext(SubscriptionProvider)
+  const {
+    isSubscribed,
+    setIsSubscribed,
+    setIsVisible,
+    setData
+  } = useContext(SubscriptionProvider)
 
   function submit() {
     setIsVisible(true)
 
     if (!isSubscribed) {
+      const { name, gameOption } = getValues()
+
+      setData({ name, gameOption })
       setTimeout(() => {
         setIsSubscribed(true)
       }, 5000)

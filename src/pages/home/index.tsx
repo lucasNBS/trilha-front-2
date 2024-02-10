@@ -7,6 +7,7 @@ import chess from "public/images/chess.jpg"
 import DetailsSection from "src/components/molecules/DetailsSection"
 import CallSection from "src/components/organisms/CallSection"
 import SubscriptionPopUp from "src/components/atoms/SubscriptionPopUp"
+import goToScrollPosition from "src/utils/goToScrollPosition"
 
 const detailsArray = [
   {
@@ -30,6 +31,8 @@ const detailsArray = [
 ]
 
 export default function Home() {
+  goToScrollPosition(0)
+
   return (
     <>
       <SubscriptionPopUp />

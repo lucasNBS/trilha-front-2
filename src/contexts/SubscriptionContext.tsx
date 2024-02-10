@@ -1,10 +1,24 @@
-import { Dispatch, ReactNode, SetStateAction, createContext, useEffect, useState } from "react"
+import {
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  createContext,
+  useEffect,
+  useState
+} from "react"
+
+type DataType = {
+  name: string,
+  gameOption: string
+}
 
 type SubscriptionProviderType = {
   isSubscribed: boolean,
-  setIsSubscribed: Dispatch<SetStateAction<boolean>>
+  setIsSubscribed: Dispatch<SetStateAction<boolean>>,
   isVisible: boolean,
-  setIsVisible: Dispatch<SetStateAction<boolean>>
+  setIsVisible: Dispatch<SetStateAction<boolean>>,
+  data: DataType,
+  setData: Dispatch<SetStateAction<DataType>>
 }
 
 export const SubscriptionProvider = createContext<SubscriptionProviderType>({
@@ -12,6 +26,8 @@ export const SubscriptionProvider = createContext<SubscriptionProviderType>({
   setIsSubscribed: (pre: SetStateAction<boolean>) => { },
   isVisible: false,
   setIsVisible: (pre: SetStateAction<boolean>) => { },
+  data: {} as DataType,
+  setData: (pre: SetStateAction<DataType>) => { },
 })
 
 type SubscriptionContextProps = {
@@ -25,6 +41,7 @@ export default function SubscriptionContext({ children }: SubscriptionContextPro
   const [isSubscribed, setIsSubscribed] = useState<boolean>(
     JSON.parse(storage ? storage : "false")
   )
+  const [data, setData] = useState<DataType>({} as DataType)
 
   useEffect(() => {
     sessionStorage.setItem("isSubscribed", JSON.stringify(isSubscribed))
@@ -40,7 +57,14 @@ export default function SubscriptionContext({ children }: SubscriptionContextPro
 
   return (
     <SubscriptionProvider.Provider
-      value={{ isSubscribed, setIsSubscribed, isVisible, setIsVisible }}
+      value={{
+        isSubscribed,
+        setIsSubscribed,
+        isVisible,
+        setIsVisible,
+        data,
+        setData
+      }}
     >
       {children}
     </SubscriptionProvider.Provider>
