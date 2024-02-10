@@ -44,6 +44,7 @@ export const BannerSubcontainer = styled.div`
 `
 
 export const BannerSubcontainerTitle = styled.h2`
+  text-align: right;
   font-size: 4rem;
   font-weight: bold;
   color: #fff;

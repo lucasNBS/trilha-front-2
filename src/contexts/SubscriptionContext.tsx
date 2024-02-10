@@ -23,11 +23,11 @@ type SubscriptionProviderType = {
 
 export const SubscriptionProvider = createContext<SubscriptionProviderType>({
   isSubscribed: false,
-  setIsSubscribed: (pre: SetStateAction<boolean>) => { },
+  setIsSubscribed: () => { },
   isVisible: false,
-  setIsVisible: (pre: SetStateAction<boolean>) => { },
+  setIsVisible: () => { },
   data: {} as DataType,
-  setData: (pre: SetStateAction<DataType>) => { },
+  setData: () => { },
 })
 
 type SubscriptionContextProps = {
@@ -35,17 +35,9 @@ type SubscriptionContextProps = {
 }
 
 export default function SubscriptionContext({ children }: SubscriptionContextProps) {
-  const storage = sessionStorage.getItem("isSubscribed")
-
   const [isVisible, setIsVisible] = useState(false)
-  const [isSubscribed, setIsSubscribed] = useState<boolean>(
-    JSON.parse(storage ? storage : "false")
-  )
+  const [isSubscribed, setIsSubscribed] = useState<boolean>(false)
   const [data, setData] = useState<DataType>({} as DataType)
-
-  useEffect(() => {
-    sessionStorage.setItem("isSubscribed", JSON.stringify(isSubscribed))
-  }, [isSubscribed])
 
   useEffect(() => {
     if (isVisible) {

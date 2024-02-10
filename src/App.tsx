@@ -7,7 +7,7 @@ import DefaultTemplate from "src/templates/DefaultTemplate/index"
 import SubscriptionContext from "./contexts/SubscriptionContext"
 
 type AppProps = {
-  children: ReactNode
+  children?: ReactNode
 }
 
 function App({ children }: AppProps) {

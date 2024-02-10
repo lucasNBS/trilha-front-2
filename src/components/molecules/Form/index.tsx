@@ -14,6 +14,7 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { SubscriptionProvider } from "src/contexts/SubscriptionContext";
+import { useNavigate } from "react-router-dom";
 
 const SelectOptionsArray = [
   {
@@ -86,6 +87,7 @@ export default function Form() {
     setIsVisible,
     setData
   } = useContext(SubscriptionProvider)
+  const navigate = useNavigate()
 
   function submit() {
     setIsVisible(true)
@@ -96,6 +98,7 @@ export default function Form() {
       setData({ name, gameOption })
       setTimeout(() => {
         setIsSubscribed(true)
+        navigate("/inscricao")
       }, 5000)
       reset()
     }

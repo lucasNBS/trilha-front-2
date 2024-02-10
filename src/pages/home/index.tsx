@@ -8,6 +8,7 @@ import DetailsSection from "src/components/molecules/DetailsSection"
 import CallSection from "src/components/organisms/CallSection"
 import SubscriptionPopUp from "src/components/atoms/SubscriptionPopUp"
 import goToScrollPosition from "src/utils/goToScrollPosition"
+import { useEffect } from "react"
 
 const detailsArray = [
   {
@@ -31,7 +32,10 @@ const detailsArray = [
 ]
 
 export default function Home() {
-  goToScrollPosition(0)
+
+  useEffect(() => {
+    goToScrollPosition(0)
+  }, [])
 
   return (
     <>
