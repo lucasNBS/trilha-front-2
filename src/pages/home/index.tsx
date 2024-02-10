@@ -5,6 +5,7 @@ import pubg from "public/images/pubg.jpg"
 import overwatch from "public/images/overwatch.webp"
 import chess from "public/images/chess.jpg"
 import DetailsSection from "src/components/molecules/DetailsSection"
+import CallSection from "src/components/organisms/CallSection"
 
 const detailsArray = [
   {
@@ -37,6 +38,7 @@ export default function Home() {
         const isEven = (index + 1) % 2 === 0
         return <DetailsSection key={index} isEven={isEven} {...item} />
       })}
+      <CallSection />
     </>
   )
 }
