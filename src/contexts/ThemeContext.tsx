@@ -1,17 +1,12 @@
 import { ReactNode } from "react"
+import { ThemeType } from "src/types/theme"
 import { ThemeProvider } from "styled-components"
-
-type ThemeType = {
-  colors: {
-    primary: string,
-    secondary: string
-  }
-}
 
 export const theme: ThemeType = {
   colors: {
     primary: "#4b1977",
-    secondary: "#5B2A86"
+    secondary: "#5B2A86",
+    hover: "#3f1069"
   }
 }
 

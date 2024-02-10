@@ -15,4 +15,8 @@ export const Link = styled.a`
   text-decoration: none;
   font-size: 1rem;
   color: #fff;
+
+  &:hover {
+    opacity: 0.6;
+  }
 `

@@ -22,6 +22,11 @@ export const InfoCardSubcontainer = styled.div`
 export const Image = styled.img`
   width: 135px;
   height: 135px;
+  transition: 200ms ease-in;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `
 
 export const InfoCardContainerText = styled.span`

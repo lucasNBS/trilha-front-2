@@ -22,6 +22,11 @@ export const Image = styled.img`
   width: 100%;
   max-width: 600px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+  transition: 200ms ease-in;
+
+  &:hover {
+    transform: scale(1.025);
+  }
 
   @media screen and (max-width: 768px) {
     max-width: 500px;

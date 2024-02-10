@@ -4,10 +4,11 @@ export type TypeType = "header"
 
 type SubscribeButtonProps = {
   type?: TypeType
+  onClick?: () => void
 }
 
-export default function SubscribeButton({ type }: SubscribeButtonProps) {
+export default function SubscribeButton({ type, onClick }: SubscribeButtonProps) {
   return (
-    <ButtonContainer type={type}>Inscrever-se</ButtonContainer>
+    <ButtonContainer onClick={onClick} type={type}>Inscrever-se</ButtonContainer>
   )
 }

@@ -8,4 +8,9 @@ export const ButtonContainer = styled.button<{ type?: TypeType }>`
   font-size: 1.2rem;
   font-weight: 400;
   color: #fff;
+  transition: 200ms ease-in-out;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.hover};
+  }
 `

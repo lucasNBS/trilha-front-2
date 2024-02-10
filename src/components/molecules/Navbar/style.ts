@@ -34,4 +34,8 @@ export const Link = styled(RouterLink)`
   font-size: 1rem;
   font-weight: lighter;
   color: #fff;
+
+  &:hover {
+    opacity: 0.6;
+  }
 `

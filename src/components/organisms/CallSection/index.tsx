@@ -10,7 +10,7 @@ import {
 export default function CallSection() {
   return (
     <CallSectionContainer>
-      <CallSectionContainerTitle>Inscreva-se</CallSectionContainerTitle>
+      <CallSectionContainerTitle id="form">Inscreva-se</CallSectionContainerTitle>
       <CallSectionSubcontainer main>
         <Form />
         <CallSectionSubcontainer column gap="1rem" maxWidth={500}>

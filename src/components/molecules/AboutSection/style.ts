@@ -54,6 +54,11 @@ export const Image = styled.img`
   object-fit: cover;
   object-position: 75%;
   border-radius: 8px;
+  transition: 200ms ease-in;
+
+  &:hover {
+    transform: scale(1.025);
+  }
 
   @media screen and (max-width: 1200px) {
     height: 600px;
