@@ -6,7 +6,9 @@ export const theme: ThemeType = {
   colors: {
     primary: "#4b1977",
     secondary: "#5B2A86",
-    hover: "#3f1069"
+    hover: "#3f1069",
+    success: "#AF0",
+    error: "#f00"
   }
 }
 

@@ -6,6 +6,7 @@ import overwatch from "public/images/overwatch.webp"
 import chess from "public/images/chess.jpg"
 import DetailsSection from "src/components/molecules/DetailsSection"
 import CallSection from "src/components/organisms/CallSection"
+import SubscriptionPopUp from "src/components/atoms/SubscriptionPopUp"
 
 const detailsArray = [
   {
@@ -31,6 +32,7 @@ const detailsArray = [
 export default function Home() {
   return (
     <>
+      <SubscriptionPopUp />
       <Banner />
       <AboutSection />
       <InfoSection />
