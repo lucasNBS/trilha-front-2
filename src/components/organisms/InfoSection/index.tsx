@@ -28,7 +28,7 @@ export default function InfoSection() {
       <InfoSectionContainerTitle>Prepare-se Para os Jogos</InfoSectionContainerTitle>
       <InfoSectionSubcontainer>
         {infoCardsArray.map((card, index) => {
-          return <InfoCard key={index} data={card} />
+          return <InfoCard key={index} {...card} />
         })}
       </InfoSectionSubcontainer>
     </InfoSectionContainer>

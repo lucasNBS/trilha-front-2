@@ -6,20 +6,18 @@ import {
 } from "./style"
 
 type InfoCardProps = {
-  data: {
-    image: string,
-    alt: string
-    text: string
-  }
+  image: string,
+  alt: string
+  text: string
 }
 
-export default function InfoCard({ data }: InfoCardProps) {
+export default function InfoCard({ image, alt, text }: InfoCardProps) {
   return (
     <InfoCardContainer>
       <InfoCardSubcontainer>
-        <Image src={data.image} alt={data.alt} />
+        <Image src={image} alt={alt} />
       </InfoCardSubcontainer>
-      <InfoCardContainerText>{data.text}</InfoCardContainerText>
+      <InfoCardContainerText>{text}</InfoCardContainerText>
     </InfoCardContainer>
   )
 }
