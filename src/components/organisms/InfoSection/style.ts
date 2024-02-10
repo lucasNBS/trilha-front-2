@@ -9,6 +9,10 @@ export const InfoSectionContainer = styled.section`
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  
+  @media screen and (max-width: 550px) {
+    padding: 6rem 2rem;
+  }
 `
 
 export const InfoSectionContainerTitle = styled.h3`
@@ -16,6 +20,10 @@ export const InfoSectionContainerTitle = styled.h3`
   font-size: 3rem;
   font-weight: bold;
   color: #fff;
+
+  @media screen and (max-width: 550px) {
+    font-size: 2.5rem;
+  }
 `
 
 export const InfoSectionSubcontainer = styled.div`

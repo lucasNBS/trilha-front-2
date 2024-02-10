@@ -29,4 +29,8 @@ export const InfoCardContainerText = styled.span`
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
+
+  @media screen and (max-width: 550px) {
+    font-size: 1.25rem;
+  }
 `

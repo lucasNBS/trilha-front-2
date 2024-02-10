@@ -1,7 +1,13 @@
 import { ButtonContainer } from "./style";
 
-export default function SubscribeButton() {
+export type TypeType = "header"
+
+type SubscribeButtonProps = {
+  type?: TypeType
+}
+
+export default function SubscribeButton({ type }: SubscribeButtonProps) {
   return (
-    <ButtonContainer>Inscrever-se</ButtonContainer>
+    <ButtonContainer type={type}>Inscrever-se</ButtonContainer>
   )
 }

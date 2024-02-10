@@ -11,7 +11,7 @@ export default function CallSection() {
   return (
     <CallSectionContainer>
       <CallSectionContainerTitle>Inscreva-se</CallSectionContainerTitle>
-      <CallSectionSubcontainer>
+      <CallSectionSubcontainer main>
         <Form />
         <CallSectionSubcontainer column gap="1rem" maxWidth={500}>
           <CallSectionSubcontainerTitle>15/04 a 17/04</CallSectionSubcontainerTitle>

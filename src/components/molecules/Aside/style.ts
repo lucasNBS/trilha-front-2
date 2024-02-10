@@ -8,7 +8,7 @@ export const AsideContainer = styled.aside<{ isOpen: boolean }>`
   width: 300px;
   height: 100vh;
   padding: 4rem 1rem;
-  transition: 200ms ease-in-out;
+  transition: 300ms ease-in-out;
   transform: ${({ isOpen }) => isOpen ? "translate(0)" : "translate(-100%)"};
 `
 

@@ -8,12 +8,24 @@ export const DetailsSectionContainer = styled.article<{ isEven?: boolean }>`
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+
+  @media screen and (max-width: 1400px) {
+    padding: 0 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 export const Image = styled.img`
   width: 100%;
   max-width: 600px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+
+  @media screen and (max-width: 768px) {
+    max-width: 500px;
+  }
 `
 
 export const DetailsSectionSubcontainer = styled.div`
@@ -29,6 +41,10 @@ export const DetailsSectionSubcontainer = styled.div`
 export const DetailsSectionSubcontainerTitle = styled.h4`
   font-size: 2rem;
   font-weight: bold;
+
+  @media screen and (max-width: 550px) {
+    font-size: 2.5rem;
+  }
 `
 
 export const DetailsSectionSubcontainerText = styled.p`

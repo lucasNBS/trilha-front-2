@@ -8,6 +8,14 @@ export const AboutSectionContainer = styled.section`
   justify-content: center;
   align-items: center;
   gap: 2rem;
+
+  @media screen and (max-width: 1400px) {
+    padding: 0 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 export const AboutSectionSubcontainer = styled.div`
@@ -17,6 +25,10 @@ export const AboutSectionSubcontainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
+  @media screen and (max-width: 768px) {
+    max-width: 500px;
+  }
 `
 
 export const AboutSectionSubcontainerTitle = styled.h3`
@@ -24,6 +36,10 @@ export const AboutSectionSubcontainerTitle = styled.h3`
   text-align: left;
   font-size: 3rem;
   font-weight: bold;
+
+  @media screen and (max-width: 550px) {
+    font-size: 2.5rem;
+  }
 `
 
 export const AboutSectionSubcontainerText = styled.p`
@@ -38,4 +54,8 @@ export const Image = styled.img`
   object-fit: cover;
   object-position: 75%;
   border-radius: 8px;
+
+  @media screen and (max-width: 1200px) {
+    height: 600px;
+  }
 `

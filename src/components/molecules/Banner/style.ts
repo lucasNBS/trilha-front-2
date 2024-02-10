@@ -21,6 +21,19 @@ export const BannerContainer = styled.section`
     inset: 0;
     z-index: -1;
   }
+
+  @media screen and (max-width: 1400px) {
+    height: 700px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 4rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    background-position: 15%;
+    padding: 4rem 1rem;
+  }
 `
 
 export const BannerSubcontainer = styled.div`
@@ -34,6 +47,14 @@ export const BannerSubcontainerTitle = styled.h2`
   font-size: 4rem;
   font-weight: bold;
   color: #fff;
+
+  @media screen and (max-width: 768px) {
+    font-size: clamp(1.5rem, 3rem, 4rem);
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: 2.5rem;
+  }
 `
 
 export const BannerSubcontainerText = styled.p`
@@ -42,4 +63,8 @@ export const BannerSubcontainerText = styled.p`
   font-size: 1.5rem;
   font-weight: 400;
   color: #fff;
+
+  @media screen and (max-width: 768px) {
+    font-size: clamp(1rem, 1.25rem, 1.5rem);
+  }
 `

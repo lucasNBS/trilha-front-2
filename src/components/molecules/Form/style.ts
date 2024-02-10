@@ -7,6 +7,10 @@ export const FormContainer = styled.form`
   flex-direction: column;
   align-items: stretch;
   gap: 3rem;
+
+  @media screen and (max-width: 768px) {
+    max-width: 500px;
+  }
 `
 
 export const FormSubcontainer = styled.div`

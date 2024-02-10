@@ -13,7 +13,7 @@ export default function Header() {
       </HeaderSubcontainer>
       <HeaderSubcontainer>
         <Navbar type="header" />
-        <SubscribeButton />
+        <SubscribeButton type="header" />
       </HeaderSubcontainer>
     </HeaderContainer>
   )
