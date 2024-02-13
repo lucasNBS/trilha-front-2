@@ -13,7 +13,7 @@ export const DetailsSectionContainer = styled.article<{ isEven?: boolean }>`
     padding: 0 2rem;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     flex-direction: column;
   }
 `
@@ -28,7 +28,7 @@ export const Image = styled.img`
     transform: scale(1.025);
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     max-width: 500px;
   }
 `

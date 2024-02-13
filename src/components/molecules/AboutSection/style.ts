@@ -13,7 +13,7 @@ export const AboutSectionContainer = styled.section`
     padding: 0 2rem;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     flex-direction: column;
   }
 `
@@ -26,7 +26,7 @@ export const AboutSectionSubcontainer = styled.div`
   align-items: center;
   gap: 1rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     max-width: 500px;
   }
 `
